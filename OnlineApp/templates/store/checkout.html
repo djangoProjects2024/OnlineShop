@@ -1,0 +1,67 @@
+{% extends 'store/main.html' %}
+{% load static %}
+   {% block content %}
+<div class="row">
+    <div class="col-lg-6">
+        <div class="box-element" id="form-wrapper">
+            <form id="form">
+                <div id="user-info">
+                    <div class="form-field">
+                    <input type="text" required class="form-control" name="name" placeholder="Name.........">
+                    </div>
+                    <div class="form-field">
+                    <input type="text" required class="form-control" name="email" placeholder="Email.........">
+                    </div>
+
+                </div>
+
+                <div id="shipping-info">
+                <hr>
+
+                    <p>Shipping Information</p>
+                <hr>
+                     <div class="form-field">
+                    <input type="text"  class="form-control" name="address" placeholder="Address.........">
+                    </div>
+                     <div class="form-field">
+                    <input type="text" required class="form-control" name="city" placeholder="City.........">
+                    </div>
+                     <div class="form-field">
+                    <input type="text" required class="form-control" name="state" placeholder="State.........">
+                    </div>
+                      <div class="form-field">
+                    <input type="text" required class="form-control" name="state" placeholder="Zip Code.........">
+                    </div>
+                </div>
+                <hr>
+                <input type="form-button" class="btn btn-success btn-block" type="submit" value="continue">
+            </form>
+
+        </div>
+        <br>
+    <div class="box-element hidden" id="payment-info">
+        <small>Paypal Options</small>
+
+    </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="box-element" >
+    <a class="btn btn-outline-dark" href="{% url 'cart' %}">&#x2190;Back to Cart</a>
+            <hr>
+            <h3>Order Summery</h3>
+            <hr>
+            <div class="cart-row">
+					<div style="flex:2"><img class="row-image" src="{% static 'images/img_4.png' %}"></div>
+					<div style="flex:2"><p>Product 1</p></div>
+					<div style="flex:1"><p>$20.00</p></div>
+					<div style="flex:1"><p>x2</p></div>
+				</div>
+                <h5>Item : 2</h5>
+                <h5>Total : $72</h5>
+
+        </div>
+    </div>
+</div>
+
+    {% endblock %}
